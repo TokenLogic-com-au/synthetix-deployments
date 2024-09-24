@@ -20,23 +20,27 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/collaterals/weeth.toml",
     "tomls/omnibus-arbitrum-mainnet/collaterals/weth.toml",
     "tomls/omnibus-arbitrum-mainnet/collaterals/wsteth.toml",
+    "tomls/omnibus-arbitrum-mainnet/collaterals/gho.toml",
 
     "tomls/omnibus-arbitrum-mainnet/collaterals/synth-eth.toml",
     "tomls/omnibus-arbitrum-mainnet/collaterals/synth-sol.toml",
     "tomls/omnibus-arbitrum-mainnet/collaterals/synth-tbtc.toml",
     "tomls/omnibus-arbitrum-mainnet/collaterals/synth-usde.toml",
+    "tomls/omnibus-arbitrum-mainnet/collaterals/synth-gho.toml",
 
     # LP Rewards
     "tomls/omnibus-arbitrum-mainnet/rewards/arb_rewards_for_arb_lp.toml",
     "tomls/omnibus-arbitrum-mainnet/rewards/arb_rewards_for_usdc_lp.toml",
     "tomls/omnibus-arbitrum-mainnet/rewards/arb_rewards_for_weth_lp.toml",
     "tomls/omnibus-arbitrum-mainnet/rewards/arb_rewards_for_usde_lp.toml",
+    "tomls/omnibus-arbitrum-mainnet/rewards/arb_rewards_for_gho_lp.toml",
 
     # Perps Liquidation rewards
     "tomls/omnibus-arbitrum-mainnet/rewards/stbtc_perps_liquidations_rewards.toml",
     "tomls/omnibus-arbitrum-mainnet/rewards/seth_perps_liquidations_rewards.toml",
     "tomls/omnibus-arbitrum-mainnet/rewards/susde_perps_liquidations_rewards.toml",
     "tomls/omnibus-arbitrum-mainnet/rewards/ssol_perps_liquidations_rewards.toml",
+    "tomls/omnibus-arbitrum-mainnet/rewards/sgho_perps_liquidations_rewards.toml",
 
     # Pyth oracles
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-aave.toml",
@@ -73,6 +77,7 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-wsteth.toml",
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-xlm.toml",
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-xrp.toml",
+    "tomls/omnibus-arbitrum-mainnet/oracles/pyth-gho.toml",
 
     # Spot Markets
     "tomls/omnibus-arbitrum-mainnet/spot/eth.toml",
@@ -80,6 +85,7 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/spot/tbtc.toml",
     "tomls/omnibus-arbitrum-mainnet/spot/usdc.toml",
     "tomls/omnibus-arbitrum-mainnet/spot/usde.toml",
+    "tomls/omnibus-arbitrum-mainnet/spot/gho.toml",
 
     #
     # Perps
@@ -128,6 +134,7 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/perps/collaterals/sol.toml",
     "tomls/omnibus-arbitrum-mainnet/perps/collaterals/usd.toml",
     "tomls/omnibus-arbitrum-mainnet/perps/collaterals/usde.toml",
+    "tomls/omnibus-arbitrum-mainnet/perps/collaterals/gho.toml",
 
 ]
 
@@ -245,6 +252,7 @@ usde_address = "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"   # https://coinmark
 weeth_address = "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe"  # https://etherfi.gitbook.io/etherfi/contracts-and-integrations/deployed-contracts
 weth_address = "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1"   # https://docs.arbitrum.io/build-decentralized-apps/reference/useful-addresses#core-contracts-1
 wsteth_address = "0x5979D7b546E38E414F7E9822514be443A4800529" # https://docs.lido.fi/deployed-contracts/#arbitrum
+gho_address = "0x7dfF72693f6A4149b17e7C6314655f6A9F7c8B33"    # https://coinmarketcap.com/currencies/gho/
 
 #Pyth Feeds - Perps
 [var.pyth_feeds]
@@ -283,6 +291,7 @@ pyth_feed_id_wif = "0x4ca4beeca86f0d164160323817a4e42b10010a724c2217c6ee41b54cd4
 pyth_feed_id_wsteth = "0x6df640f3b8963d8f8358f791f352b8364513f6ab1cca5ed3f1f7b5448980e784"
 pyth_feed_id_xlm = "0xb7a8eba68a997cd0210c2e1e4ee811ad2d174b3611c22d9ebf16f4cb7e9ba850"
 pyth_feed_id_xrp = "0xec5d399846a9209f3fe5881d70aae9268c94339ff9817e8d18ff19fa05eea1c8"
+pyth_feed_id_gho = "0x2a0e948f637a8c251d9f06055e72eb4b3880dd57848bbdb02993c8165d7df4ee"
 
 #USD Core Token
 
