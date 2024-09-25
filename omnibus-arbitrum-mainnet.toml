@@ -1,5 +1,5 @@
 name = "synthetix-omnibus"
-version = "28"
+version = "29"
 description = "Includes the full synthetix system with configurations applied"
 preset = "main"
 include = [
@@ -77,7 +77,9 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-wsteth.toml",
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-xlm.toml",
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-xrp.toml",
-    "tomls/omnibus-arbitrum-mainnet/oracles/pyth-gho.toml",
+
+    # Chainlink oracles
+    "tomls/omnibus-arbitrum-mainnet/oracles/chainlink-gho.toml",
 
     # Spot Markets
     "tomls/omnibus-arbitrum-mainnet/spot/eth.toml",
@@ -291,7 +293,13 @@ pyth_feed_id_wif = "0x4ca4beeca86f0d164160323817a4e42b10010a724c2217c6ee41b54cd4
 pyth_feed_id_wsteth = "0x6df640f3b8963d8f8358f791f352b8364513f6ab1cca5ed3f1f7b5448980e784"
 pyth_feed_id_xlm = "0xb7a8eba68a997cd0210c2e1e4ee811ad2d174b3611c22d9ebf16f4cb7e9ba850"
 pyth_feed_id_xrp = "0xec5d399846a9209f3fe5881d70aae9268c94339ff9817e8d18ff19fa05eea1c8"
-pyth_feed_id_gho = "0x2a0e948f637a8c251d9f06055e72eb4b3880dd57848bbdb02993c8165d7df4ee"
+
+#Chainlink Feeds
+[var.chainlink_feeds]
+gho_aggregator_address = "0x3c786e934F23375Ca345C9b8D5aD54838796E8e7"
+
+[setting.gho_chainlink_staleness_tolerance]
+defaultValue = "129600"
 
 #USD Core Token
 

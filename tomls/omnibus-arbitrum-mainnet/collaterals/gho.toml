@@ -20,7 +20,7 @@ func = "configureCollateral"  # "args" see below in the multiline block
 
 [[invoke.CoreProxy_configureCollateral_GHO.args]]
 tokenAddress = "<%= settings.gho_address %>"
-oracleNodeId = "<%= extras.GHO_oracle_id %>"
+oracleNodeId = "<%= extras.gho_oracle_id %>"
 issuanceRatioD18 = "<%= settings.GHO_issuance_ratio %>"
 liquidationRatioD18 = "<%= settings.GHO_liquidation_ratio %>"
 liquidationRewardD18 = "<%= settings.GHO_liquidation_reward %>"
