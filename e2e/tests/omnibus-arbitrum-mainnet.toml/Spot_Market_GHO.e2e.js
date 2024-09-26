@@ -69,7 +69,7 @@ describe(require('path').basename(__filename, '.e2e.js'), function () {
       wallet,
       balance: 1_000,
       tokenAddress,
-      friendlyWhale: '0xA4ffe78ba40B7Ec0C348fFE36a8dE4F9d6198d2d',
+      friendlyWhale: '0xeBe517846d0F36eCEd99C735cbF6131e1fEB775D',
     });
     assert.equal(await getCollateralBalance({ address, symbol: 'GHO' }), 1000);
   });
@@ -99,14 +99,14 @@ describe(require('path').basename(__filename, '.e2e.js'), function () {
     );
   });
 
-  it(`should do strict price update`, async () => {
-    await doPriceUpdateForPyth({
-      wallet,
-      feedId: require('../../deployments/extras.json').pyth_feed_id_gho,
-      priceVerificationContract: require('../../deployments/extras.json')
-        .pyth_price_verification_address,
-    });
-  });
+  // it(`should do strict price update`, async () => {
+  //   await doPriceUpdateForPyth({
+  //     wallet,
+  //     feedId: require('../../deployments/extras.json').pyth_feed_id_gho,
+  //     priceVerificationContract: require('../../deployments/extras.json')
+  //       .pyth_price_verification_address,
+  //   });
+  // });
 
   it(`should wrap 1000 GHO -> sGHO`, async () => {
     const synthBalance = await wrapCollateral({

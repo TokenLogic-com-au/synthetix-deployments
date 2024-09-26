@@ -50,6 +50,17 @@ args = [
     "<%= imports.RewardsDistributor_synth_gho_liquidation_rewards.contracts.RewardsDistributorExternal.address %>",
 ]
 
+[invoke.CoreProxy_registerRewardsDistributor_synth_gho_liquidation_rewards_for_SpartanCouncilPool_USDe_lp]
+target = ["system.CoreProxy"]
+fromCall.func = "getPoolOwner"
+fromCall.args = ["<%= extras.spartan_council_pool_id %>"]
+func = "registerRewardsDistributor"
+args = [
+    "<%= extras.spartan_council_pool_id %>",
+    "<%= settings.usde_address %>",
+    "<%= imports.RewardsDistributor_synth_gho_liquidation_rewards.contracts.RewardsDistributorExternal.address %>",
+]
+
 [invoke.CoreProxy_registerRewardsDistributor_synth_gho_liquidation_rewards_for_SpartanCouncilPool_GHO_lp]
 target = ["system.CoreProxy"]
 fromCall.func = "getPoolOwner"

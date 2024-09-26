@@ -101,7 +101,7 @@ describe(require('path').basename(__filename, '.e2e.js'), function () {
       wallet,
       balance: 600,
       tokenAddress: require('../../deployments/extras.json').gho_address,
-      friendlyWhale: '0xb3c24d9dccc2ec5f778742389ffe448e295b84e0',
+      friendlyWhale: '0xeBe517846d0F36eCEd99C735cbF6131e1fEB775D',
     });
     assert.equal(await getCollateralBalance({ address, symbol: 'GHO' }), 600);
   });
