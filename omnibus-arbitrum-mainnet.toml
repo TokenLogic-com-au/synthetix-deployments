@@ -298,8 +298,8 @@ pyth_feed_id_xrp = "0xec5d399846a9209f3fe5881d70aae9268c94339ff9817e8d18ff19fa05
 [var.chainlink_feeds]
 gho_aggregator_address = "0x3c786e934F23375Ca345C9b8D5aD54838796E8e7"
 
-[setting.gho_chainlink_staleness_tolerance]
-defaultValue = "129600"
+# [setting.gho_chainlink_staleness_tolerance]
+# defaultValue = "12960000"
 
 #USD Core Token
 

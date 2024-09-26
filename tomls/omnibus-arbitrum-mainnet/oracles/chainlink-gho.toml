@@ -1,7 +1,7 @@
 
 [setting.gho_aggregator_address]
 
-[setting.gho_chainlink_staleness_tolerance]
+# [setting.gho_chainlink_staleness_tolerance]
 
 [invoke.OracleManagerProxy_registerNode_chainlink_GHO]
 description = "Latest Chainlink Price. This registers a staleness node that looks to chainlink for a fresh enough price, or otherwise reverts with an ERC-7412 compatible error "
@@ -13,19 +13,19 @@ args = [
     [
     ],
 ]
-extra.gho_oracle_id_raw.event = "NodeRegistered"
-extra.gho_oracle_id_raw.arg = 0
-depends = ['provision.system', 'setting.gho_aggregator_address']
-
-[invoke.registerGHOWithStaleness]
-target = ["system.oracle_manager.Proxy"]
-func = "registerNode"
-args = [
-    7, # 7 = staleness circuit breaker
-    "<%= defaultAbiCoder.encode(['uint256'], [settings.gho_chainlink_staleness_tolerance]) %>",
-    [
-        "<%= extras.gho_oracle_id_raw %>",
-    ],
-]
 extra.gho_oracle_id.event = "NodeRegistered"
 extra.gho_oracle_id.arg = 0
+depends = ['provision.system', 'setting.gho_aggregator_address']
+
+# [invoke.registerGHOWithStaleness]
+# target = ["system.oracle_manager.Proxy"]
+# func = "registerNode"
+# args = [
+#     7, # 7 = staleness circuit breaker
+#     "<%= defaultAbiCoder.encode(['uint256'], [settings.gho_chainlink_staleness_tolerance]) %>",
+#     [
+#         "<%= extras.gho_oracle_id_raw %>",
+#     ],
+# ]
+# extra.gho_oracle_id.event = "NodeRegistered"
+# extra.gho_oracle_id.arg = 0
