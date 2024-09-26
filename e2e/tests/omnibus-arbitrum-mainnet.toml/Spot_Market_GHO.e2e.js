@@ -58,7 +58,7 @@ describe(require('path').basename(__filename, '.e2e.js'), function () {
     assert.equal(await getEthBalance({ address }), 100);
   });
 
-  it('should set USDe balance to 1000', async () => {
+  it('should set GHO balance to 1000', async () => {
     const { tokenAddress } = await getCollateralConfig('GHO');
     assert.equal(
       await getCollateralBalance({ address, symbol: 'GHO' }),
@@ -130,7 +130,7 @@ describe(require('path').basename(__filename, '.e2e.js'), function () {
     assert.equal(await getCollateralBalance({ address, symbol: 'USDx' }), 0);
     await spotSell({
       wallet,
-      marketId: require('../../deployments/extras.json').synth_usde_market_id,
+      marketId: require('../../deployments/extras.json').synth_gho_market_id,
       synthAmount: 500,
       minUsdAmount: 200,
     });
