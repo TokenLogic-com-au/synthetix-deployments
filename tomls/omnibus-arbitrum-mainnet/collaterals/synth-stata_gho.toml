@@ -1,0 +1,25 @@
+[setting.sstatagho_issuance_ratio]
+defaultValue = "<%= MaxUint256 %>"
+
+[setting.sstatagho_liquidation_ratio]
+defaultValue = "<%= parseEther('1.1') %>"
+
+[setting.sstatagho_liquidation_reward]
+defaultValue = "<%= parseEther('1') %>"
+
+[setting.sstatagho_min_delegation]
+defaultValue = "<%= parseEther('100') %>"
+
+[invoke.configure_sstatagho_collateral]
+target = ["system.CoreProxy"]
+fromCall.func = "owner"
+func = "configureCollateral"  # "args" see below in the multiline block
+
+[[invoke.configure_sstatagho_collateral.args]]
+tokenAddress = "<%= extras.synth_stata_gho_token_address %>"
+oracleNodeId = "<%= extras.erc_4626_to_assets_ratio_oracle_id %>"
+issuanceRatioD18 = "<%= settings.sstatagho_issuance_ratio %>"
+liquidationRatioD18 = "<%= settings.sstatagho_liquidation_ratio %>"
+liquidationRewardD18 = "<%= settings.sstatagho_liquidation_reward %>"
+minDelegationD18 = "<%= settings.sstatagho_min_delegation %>"
+depositingEnabled = true
