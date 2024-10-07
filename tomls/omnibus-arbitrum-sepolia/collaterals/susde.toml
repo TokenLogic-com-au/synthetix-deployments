@@ -1,17 +1,9 @@
-[setting.sUSDe_max_collateral_limit]
-defaultValue = "<%= parseEther(String(0)) %>"
-
-[setting.sUSDe_issuance_ratio]
-defaultValue = "<%= parseEther('2.00') %>"
-
-[setting.sUSDe_liquidation_ratio]
-defaultValue = "<%= parseEther('1.05') %>"
-
-[setting.sUSDe_liquidation_reward]
-defaultValue = "<%= parseEther('1') %>"
-
-[setting.sUSDe_min_delegation]
-defaultValue = "<%= parseEther('100') %>"
+[var.susde_collateral_config]
+susde_max_collateral_limit = "<%= parseEther(String(10_000_000)) %>"
+susde_issuance_ratio = "<%= parseEther('10.00') %>"
+susde_liquidation_ratio = "<%= parseEther('1.05') %>"
+susde_liquidation_reward = "<%= parseEther('1') %>"
+susde_min_delegation = "<%= parseEther('100') %>"
 
 [invoke.CoreProxy_configureCollateral_sUSDe]
 target = ["system.CoreProxy"]
@@ -21,11 +13,11 @@ func = "configureCollateral"  # "args" see below in the multiline block
 [[invoke.CoreProxy_configureCollateral_sUSDe.args]]
 tokenAddress = "<%= settings.susde_address %>"
 oracleNodeId = "<%= extras.sUSDe_oracle_id %>"
-issuanceRatioD18 = "<%= settings.sUSDe_issuance_ratio %>"
-liquidationRatioD18 = "<%= settings.sUSDe_liquidation_ratio %>"
-liquidationRewardD18 = "<%= settings.sUSDe_liquidation_reward %>"
-minDelegationD18 = "<%= settings.sUSDe_min_delegation %>"
-depositingEnabled = false
+issuanceRatioD18 = "<%= settings.susde_issuance_ratio %>"
+liquidationRatioD18 = "<%= settings.susde_liquidation_ratio %>"
+liquidationRewardD18 = "<%= settings.susde_liquidation_reward %>"
+minDelegationD18 = "<%= settings.susde_min_delegation %>"
+depositingEnabled = true
 
 [invoke.CoreProxy_setPoolCollateralConfiguration_sUSDe]
 target = ["system.CoreProxy"]
@@ -35,5 +27,5 @@ func = "setPoolCollateralConfiguration"
 args = [
     "<%= extras.spartan_council_pool_id %>",
     "<%= settings.susde_address %>",
-    { collateralLimitD18 = "<%= settings.sUSDe_max_collateral_limit %>", issuanceRatioD18 = 0 },
+    { collateralLimitD18 = "<%= settings.susde_max_collateral_limit %>", issuanceRatioD18 = 0 },
 ]
