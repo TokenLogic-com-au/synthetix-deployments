@@ -1,8 +1,8 @@
 [setting.sstatagho_issuance_ratio]
-defaultValue = "<%= MaxUint256 %>"
+defaultValue = "<%= parseEther('1.25') %>"
 
 [setting.sstatagho_liquidation_ratio]
-defaultValue = "<%= parseEther('1.1') %>"
+defaultValue = "<%= parseEther('1.05') %>"
 
 [setting.sstatagho_liquidation_reward]
 defaultValue = "<%= parseEther('1') %>"
