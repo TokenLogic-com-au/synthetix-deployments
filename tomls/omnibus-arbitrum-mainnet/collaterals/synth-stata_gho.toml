@@ -1,5 +1,5 @@
 [setting.sstatagho_issuance_ratio]
-defaultValue = "<%= parseEther('1.25') %>"
+defaultValue = "<%= parseEther('10') %>"
 
 [setting.sstatagho_liquidation_ratio]
 defaultValue = "<%= parseEther('1.05') %>"

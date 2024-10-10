@@ -5,7 +5,7 @@ defaultValue = "<%= parseEther(String(10_000_000)) %>"
 defaultValue = "60"
 
 [setting.stata_gho_issuance_ratio]
-defaultValue = "<%= parseEther('1.25') %>"
+defaultValue = "<%= parseEther('10') %>"
 
 [setting.stata_gho_liquidation_ratio]
 defaultValue = "<%= parseEther('1.05') %>"
