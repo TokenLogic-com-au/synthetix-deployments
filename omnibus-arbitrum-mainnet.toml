@@ -1,5 +1,5 @@
 name = "synthetix-omnibus"
-version = "39"
+version = "40"
 description = "Includes the full synthetix system with configurations applied"
 preset = "main"
 deployers = [
@@ -247,6 +247,7 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/perps/collaterals/sol.toml",
     "tomls/omnibus-arbitrum-mainnet/perps/collaterals/usd.toml",
     "tomls/omnibus-arbitrum-mainnet/perps/collaterals/usde.toml",
+    "tomls/omnibus-arbitrum-mainnet/perps/collaterals/gho.toml",
 ]
 
 [setting.target_preset]
