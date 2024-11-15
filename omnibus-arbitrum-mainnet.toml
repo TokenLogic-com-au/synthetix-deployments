@@ -30,6 +30,7 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/collaterals/synth-sol.toml",
     "tomls/omnibus-arbitrum-mainnet/collaterals/synth-tbtc.toml",
     "tomls/omnibus-arbitrum-mainnet/collaterals/synth-usde.toml",
+    "tomls/omnibus-arbitrum-mainnet/collaterals/synth-gho.toml",
 
     # LP Rewards
     "tomls/omnibus-arbitrum-mainnet/rewards/arb_rewards_for_arb_lp.toml",
@@ -136,6 +137,7 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-yfi.toml",
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-zro.toml",
     #"tomls/omnibus-arbitrum-mainnet/oracles/pyth-cat.toml",
+    "tomls/omnibus-arbitrum-mainnet/oracles/pyth-gho.toml",
 
     # Spot Markets
     "tomls/omnibus-arbitrum-mainnet/spot/eth.toml",
@@ -464,6 +466,7 @@ pyth_feed_id_xlm = "0xb7a8eba68a997cd0210c2e1e4ee811ad2d174b3611c22d9ebf16f4cb7e
 pyth_feed_id_xrp = "0xec5d399846a9209f3fe5881d70aae9268c94339ff9817e8d18ff19fa05eea1c8"
 pyth_feed_id_yfi = "0x425f4b198ab2504936886c1e93511bb6720fbcf2045a4f3c0723bb213846022f"
 pyth_feed_id_zro = "0x3bd860bea28bf982fa06bcf358118064bb114086cc03993bd76197eaab0b8018"
+pyth_feed_id_gho = "0x2a0e948f637a8c251d9f06055e72eb4b3880dd57848bbdb02993c8165d7df4ee"
 
 #USD Core Token
 
