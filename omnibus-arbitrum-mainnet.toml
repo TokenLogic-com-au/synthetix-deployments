@@ -26,6 +26,7 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/collaterals/synth-sol.toml",
     "tomls/omnibus-arbitrum-mainnet/collaterals/synth-tbtc.toml",
     "tomls/omnibus-arbitrum-mainnet/collaterals/synth-usde.toml",
+    "tomls/omnibus-arbitrum-mainnet/collaterals/synth-stata_gho.toml",
 
     # LP Rewards
     "tomls/omnibus-arbitrum-mainnet/rewards/arb_rewards_for_arb_lp.toml",
@@ -76,12 +77,16 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-xlm.toml",
     "tomls/omnibus-arbitrum-mainnet/oracles/pyth-xrp.toml",
 
+    # Chainlink oracles
+    "tomls/omnibus-arbitrum-mainnet/oracles/stata_gho-gho.toml",
+
     # Spot Markets
     "tomls/omnibus-arbitrum-mainnet/spot/eth.toml",
     "tomls/omnibus-arbitrum-mainnet/spot/sol.toml",
     "tomls/omnibus-arbitrum-mainnet/spot/tbtc.toml",
     "tomls/omnibus-arbitrum-mainnet/spot/usdc.toml",
     "tomls/omnibus-arbitrum-mainnet/spot/usde.toml",
+    "tomls/omnibus-arbitrum-mainnet/spot/stata_gho.toml",
 
     #
     # Perps
@@ -130,7 +135,6 @@ include = [
     "tomls/omnibus-arbitrum-mainnet/perps/collaterals/sol.toml",
     "tomls/omnibus-arbitrum-mainnet/perps/collaterals/usd.toml",
     "tomls/omnibus-arbitrum-mainnet/perps/collaterals/usde.toml",
-
 ]
 
 [setting.target_preset]
@@ -240,14 +244,15 @@ synth_usdc_max_market_collateral = "<%= parseEther(String(10_000_000)) %>"
 #Token Addresses
 [var.token_addresses]
 arb_address = "0x912CE59144191C1204E64559FE8253a0e49E6548"
-sol_address = "0xb74Da9FE2F96B9E0a5f4A3cf0b92dd2bEC617124"    # https://docs.wormhole.com/wormhole
-susde_address = "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2"  # https://coinmarketcap.com/currencies/ethena-staked-usde/
+sol_address = "0xb74Da9FE2F96B9E0a5f4A3cf0b92dd2bEC617124"       # https://docs.wormhole.com/wormhole
+susde_address = "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2"     # https://coinmarketcap.com/currencies/ethena-staked-usde/
 tbtc_address = "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40"
-usdc_address = "0xaf88d065e77c8cC2239327C5EDb3A432268e5831"   # https://developers.circle.com/stablecoins/docs/usdc-on-main-networks
-usde_address = "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"   # https://coinmarketcap.com/currencies/ethena-usde/
-weeth_address = "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe"  # https://etherfi.gitbook.io/etherfi/contracts-and-integrations/deployed-contracts
-weth_address = "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1"   # https://docs.arbitrum.io/build-decentralized-apps/reference/useful-addresses#core-contracts-1
-wsteth_address = "0x5979D7b546E38E414F7E9822514be443A4800529" # https://docs.lido.fi/deployed-contracts/#arbitrum
+usdc_address = "0xaf88d065e77c8cC2239327C5EDb3A432268e5831"      # https://developers.circle.com/stablecoins/docs/usdc-on-main-networks
+usde_address = "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"      # https://coinmarketcap.com/currencies/ethena-usde/
+weeth_address = "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe"     # https://etherfi.gitbook.io/etherfi/contracts-and-integrations/deployed-contracts
+weth_address = "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1"      # https://docs.arbitrum.io/build-decentralized-apps/reference/useful-addresses#core-contracts-1
+wsteth_address = "0x5979D7b546E38E414F7E9822514be443A4800529"    # https://docs.lido.fi/deployed-contracts/#arbitrum
+stata_gho_address = "0xD9FBA68D89178e3538e708939332c79efC540179" # https://arbiscan.io/address/0xD9FBA68D89178e3538e708939332c79efC540179
 
 #Pyth Feeds - Perps
 [var.pyth_feeds]
