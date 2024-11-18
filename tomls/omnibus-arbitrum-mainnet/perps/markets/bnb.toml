@@ -1,9 +1,9 @@
 [var.perps_bnb_market_settings]
 bnb_perps_market_id = "1700"
 bnb_perps_market_skew_scale = "<%= parseEther(String(250_000)) %>"
-bnb_perps_market_max_funding_velocity = "<%= parseEther('36') %>"
+bnb_perps_market_max_funding_velocity = "<%= parseEther('9') %>"
 bnb_perps_maker_fee_ratio = "<%= parseEther('0') %>"
-bnb_perps_taker_fee_ratio = "<%= parseEther('0.0010') %>"
+bnb_perps_taker_fee_ratio = "<%= parseEther('0.0005') %>"
 bnb_perps_max_market_size = "<%= parseEther(String(9_500)) %>"
 bnb_perps_max_market_value = "<%= parseEther(String(5_000_000)) %>"
 bnb_perps_initial_margin_ratio = "<%= parseEther('3.4') %>"
@@ -30,7 +30,7 @@ func = "updatePriceData"
 args = [
     "<%= settings.bnb_perps_market_id %>",
     "<%= extras.bnb_oracle_id %>",
-    "<%= settings.big_cap_strict_staleness_tolerance %>",
+    "<%= settings.strict_staleness_tolerance %>",
 ]
 
 [invoke.addPerpsBnbSettlementStrategy]
@@ -52,7 +52,7 @@ func = "setSettlementStrategy"
 args = [
     "<%= settings.bnb_perps_market_id %>",
     "<%= extras.bnb_pyth_settlement_strategy %>",
-    { strategyType = "0", settlementDelay = "<%= settings.big_cap_settlement_delay %>", settlementWindowDuration = "<%= settings.big_cap_settlement_window_duration %>", priceVerificationContract = "<%= imports.pyth_erc7412_wrapper.contracts.PythERC7412Wrapper.address %>", feedId = "<%= settings.pyth_feed_id_bnb %>", settlementReward = "<%= settings.settlement_reward %>", disabled = false, commitmentPriceDelay = "<%= settings.commitment_price_delay %>" },
+    { strategyType = "0", settlementDelay = "<%= settings.settlement_delay %>", settlementWindowDuration = "<%= settings.settlement_window_duration %>", priceVerificationContract = "<%= imports.pyth_erc7412_wrapper.contracts.PythERC7412Wrapper.address %>", feedId = "<%= settings.pyth_feed_id_bnb %>", settlementReward = "<%= settings.settlement_reward %>", disabled = false, commitmentPriceDelay = "<%= settings.commitment_price_delay %>" },
 ]
 
 [invoke.setPerpsBnbFundingParameters]
