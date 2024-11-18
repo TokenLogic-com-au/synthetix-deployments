@@ -1,0 +1,28 @@
+[var.perps_collateral_stata_gho_settings]
+synth_stata_gho_max_collateral_amount = "<%= parseEther(String(10_000_000)) %>"
+synth_stata_gho_upper_limit_discount = "<%= parseEther('0.0051') %>"
+synth_stata_gho_lower_limit_discount = "<%= parseEther('0.0050') %>"
+synth_stata_gho_discount_scalar = "<%= parseEther('1') %>"
+
+[invoke.PerpsMarketProxy_setCollateralConfiguration_synth_stata_gho]
+target = ["perpsFactory.PerpsMarketProxy"]
+fromCall.func = "owner"
+func = "setCollateralConfiguration"
+args = [
+  "<%= extras.synth_stata_gho_market_id %>",
+  "<%= settings.synth_stata_gho_max_collateral_amount %>",
+  "<%= settings.synth_stata_gho_upper_limit_discount %>",
+  "<%= settings.synth_stata_gho_lower_limit_discount %>",
+  "<%= settings.synth_stata_gho_discount_scalar %>",
+]
+
+[invoke.CoreProxy_configureMaximumMarketCollateral_Perps_synth_stata_gho]
+target = ["system.CoreProxy"]
+fromCall.func = "owner"
+fromCall.args = []
+func = "configureMaximumMarketCollateral"
+args = [
+  "<%= imports.perpsFactory.extras.superMarketId %>",
+  "<%= extras.synth_stata_gho_token_address %>",
+  "<%= settings.synth_stata_gho_max_collateral_amount %>",
+]
