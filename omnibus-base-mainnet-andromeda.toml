@@ -26,6 +26,7 @@ include = [
     "tomls/omnibus-base-mainnet-andromeda/collaterals/synth-cbeth.toml",
     "tomls/omnibus-base-mainnet-andromeda/collaterals/synth-wsteth.toml",
     "tomls/omnibus-base-mainnet-andromeda/collaterals/synth-weth.toml",
+    "tomls/omnibus-base-mainnet-andromeda/collaterals/synth-wa-gho.toml",
 
     # Spot Markets
     "tomls/omnibus-base-mainnet-andromeda/spot/USDC.toml",
@@ -34,6 +35,7 @@ include = [
     "tomls/omnibus-base-mainnet-andromeda/spot/cbeth.toml",
     "tomls/omnibus-base-mainnet-andromeda/spot/wsteth.toml",
     "tomls/omnibus-base-mainnet-andromeda/spot/weth.toml",
+    "tomls/omnibus-base-mainnet-andromeda/spot/waGHO.toml",
 
     # Perps Liquidation rewards
     "tomls/omnibus-base-mainnet-andromeda/rewards/snx_rewards_for_sc_pool.toml",
@@ -47,6 +49,9 @@ include = [
 
     # stataUSDC
     "tomls/omnibus-base-mainnet-andromeda/oracles/stataUSDC-USDC.toml",
+    
+    # waGHO
+    "tomls/omnibus-base-mainnet-andromeda/oracles/waGHO-GHO.toml",
 
     # Pyth oracles
     "tomls/omnibus-base-mainnet-andromeda/oracles/pyth-cbbtc.toml",
@@ -171,6 +176,7 @@ include = [
     "tomls/omnibus-base-mainnet-andromeda/perps/collaterals/weth.toml",
     "tomls/omnibus-base-mainnet-andromeda/perps/collaterals/usdc.toml",
     "tomls/omnibus-base-mainnet-andromeda/perps/collaterals/stata-usdc.toml",
+    "tomls/omnibus-base-mainnet-andromeda/perps/collaterals/wa-gho.toml",
 
     # Perps Settings
     "tomls/omnibus-base-mainnet-andromeda/perps/global.toml",
@@ -365,6 +371,10 @@ defaultValue = "0xEde8a407913A874Dd7e3d5B731AFcA135D30375E"
 [setting.stataBasUSDC_address]
 defaultValue = "0x4EA71A20e655794051D1eE8b6e4A3269B13ccaCc"
 description = "https://basescan.org/token/0x4EA71A20e655794051D1eE8b6e4A3269B13ccaCc"
+
+[setting.waBasGHO_address]
+defaultValue = "0x88b1Cd4b430D95b406E382C3cDBaE54697a0286E"
+description = "https://basescan.org/token/0x88b1Cd4b430D95b406E382C3cDBaE54697a0286E"
 
 [var.token_addresses]
 cbbtc_address = "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"
