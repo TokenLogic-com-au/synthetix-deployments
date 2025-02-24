@@ -67,7 +67,7 @@ describe(require('path').basename(__filename, '.e2e.js'), function () {
       wallet,
       balance: 100,
       tokenAddress: require('../../deployments/extras.json').waBasGHO_address,
-      friendlyWhale: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
+      friendlyWhale: '0xbA1333333333a1BA1108E8412f11850A5C319bA9',
     });
     assert.equal(await getCollateralBalance({ address, symbol: 'waBasGHO' }), 100);
   });
