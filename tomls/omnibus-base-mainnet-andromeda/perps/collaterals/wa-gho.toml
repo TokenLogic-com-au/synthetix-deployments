@@ -1,21 +1,21 @@
-[var.perps_collateral_synth_wa_base_settings]
-synth_wa_base_upper_limit_discount = "<%= parseEther('0') %>"
-synth_wa_base_lower_limit_discount = "<%= parseEther('0') %>"
-synth_wa_base_discount_scalar = "<%= parseEther('1') %>"
+[var.perps_collateral_synth_wa_gho_settings]
+synth_wa_gho_upper_limit_discount = "<%= parseEther('0') %>"
+synth_wa_gho_lower_limit_discount = "<%= parseEther('0') %>"
+synth_wa_gho_discount_scalar = "<%= parseEther('1') %>"
 
-[invoke.PerpsMarketProxy_setCollateralConfiguration_synth_wa_base]
+[invoke.PerpsMarketProxy_setCollateralConfiguration_synth_wa_gho]
 target = ["perpsFactory.PerpsMarketProxy"]
 fromCall.func = "owner"
 func = "setCollateralConfiguration"
 args = [
-    "<%= extras.synth_wa_base_market_id %>",
+    "<%= extras.synth_wa_gho_market_id %>",
     "<%= settings.synthWaGHOMaxMarketCollateral %>",
-    "<%= settings.synth_wa_base_upper_limit_discount %>",
-    "<%= settings.synth_wa_base_lower_limit_discount %>",
-    "<%= settings.synth_wa_base_discount_scalar %>",
+    "<%= settings.synth_wa_gho_upper_limit_discount %>",
+    "<%= settings.synth_wa_gho_lower_limit_discount %>",
+    "<%= settings.synth_wa_gho_discount_scalar %>",
 ]
 
-[invoke.CoreProxy_configureMaximumMarketCollateral_Perps_synth_wa_base]
+[invoke.CoreProxy_configureMaximumMarketCollateral_Perps_synth_wa_gho]
 target = ["system.CoreProxy"]
 fromCall.func = "owner"
 fromCall.args = []

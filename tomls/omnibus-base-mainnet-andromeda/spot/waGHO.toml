@@ -1,4 +1,4 @@
-[setting.synthWaGhoMaxMarketCollateral]
+[setting.synthWaGHOMaxMarketCollateral]
 defaultValue = "<%= parseEther(String(50_000_000)) %>"
 
 [setting.spotStrictStalenessTolerance]
@@ -47,7 +47,7 @@ func = "configureMaximumMarketCollateral"
 args = [
     "<%= extras.synth_wa_gho_market_id %>",
     "<%= settings.waBasGHO_address %>",
-    "<%= settings.synthWaGhoMaxMarketCollateral %>",
+    "<%= settings.synthWaGHOMaxMarketCollateral %>",
 ]
 
 [invoke.SpotMarketProxy_setWrapper_waGho]
@@ -58,7 +58,7 @@ func = "setWrapper"
 args = [
     "<%= extras.synth_wa_gho_market_id %>",
     "<%= settings.waBasGHO_address %>",
-    "<%= settings.synthWaGhoMaxMarketCollateral %>",
+    "<%= settings.synthWaGHOMaxMarketCollateral %>",
 ]
 
 # We allow waGHO as collateral with depositingEnabled = false so the spot market can deposit it, but it can't be LPed
